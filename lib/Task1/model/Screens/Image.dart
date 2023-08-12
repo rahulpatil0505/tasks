@@ -17,7 +17,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Image Picker"),
+        title: const Text("Image Picker"),
       ),
       body: Center(
         child: Column(
@@ -35,7 +35,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
                 : Container(),
             ElevatedButton(
               onPressed: _pickImage,
-              child: Text("Pick Image"),
+              child: const Text("Pick Image"),
             ),
             Padding(
               padding: const EdgeInsets.all(9.0),
@@ -65,7 +65,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
                                   )),
                             )
                           : Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "Image",
                                   style: TextStyle(
@@ -80,7 +80,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
                       padding: const EdgeInsets.only(right: 15),
                       child: InkWell(
                         onTap: _pickImage,
-                        child: Icon(
+                        child: const Icon(
                           CupertinoIcons.photo_on_rectangle,
                           size: 35,
                           color: Color.fromARGB(255, 113, 152, 150),

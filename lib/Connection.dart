@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/Task1/model/Screens/Show.dart';
 
+import 'Task2/Sedule.dart';
+
 class Connections extends StatefulWidget {
   const Connections({super.key});
 
@@ -13,10 +15,11 @@ class _ConnectionsState extends State<Connections> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Connections'),
+        title: const Text('Connections'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
               height: 45,
@@ -26,10 +29,25 @@ class _ConnectionsState extends State<Connections> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProductShow(),
+                          builder: (context) => const ProductShow(),
                         ));
                   },
-                  child: Text("Task -1")))
+                  child: const Text("Task -1"))),
+          const SizedBox(
+            height: 40,
+          ),
+          Container(
+              height: 45,
+              width: 180,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => VetScheduleScreen(),
+                        ));
+                  },
+                  child: const Text("Task -2")))
         ],
       ),
     );
